@@ -1,6 +1,29 @@
 @import '../../styles/variables';
 
 .header {
-	color: $primary;
+	color: white;
 	font-family: var(--font-roboto);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $primary;
+	padding: 0 20px;
+	input {
+		min-width: 300px;
+		border-radius: 10px;
+		border: none;
+		padding: 5px 10px;
+		outline: none;
+	}
+}
+
+.navigation {
+	display: flex;
+	justify-content: flex-end;
+	flex: 0.5;
+	nav ul {
+		list-style-type: none;
+		display: flex;
+		gap: 50px;
+	}
 }

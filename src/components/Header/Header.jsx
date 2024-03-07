@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Header() {
 	return (
 		<header className={styles.header}>
-			<div>
+			<div className={styles.logo}>
 				<p>My Movie App</p>
 			</div>
-			<div>
+			<div className={styles.navigation}>
 				<nav>
 					<ul>
 						<li>Films</li>
