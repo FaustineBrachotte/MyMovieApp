@@ -1,5 +1,6 @@
 import './globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { roboto, montserrat } from '@/styles/font';
 import Header from '../components/Header/Header';
 
 export const metadata = {
@@ -10,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='fr'>
-			<body>
+			<body className={`${roboto.variable} ${montserrat.variable}`}>
 				<Header />
 				<main>{children}</main>
 			</body>

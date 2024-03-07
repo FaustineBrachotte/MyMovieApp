@@ -1,12 +1,10 @@
-import { Roboto } from 'next/font/google';
 import styles from './Header.module.scss';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300'] });
 
 function Header() {
 	return (
-		<header className={`${styles.header} ${roboto.className} `}>
+		<header className={styles.header}>
 			<div>
 				<p>My Movie App</p>
 			</div>
