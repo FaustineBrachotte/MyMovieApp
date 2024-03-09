@@ -2,20 +2,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './MediaCard.module.scss';
 
-function MediaCard({ mediaId }) {
+function MediaCard({ media }) {
 	return (
 		<div className={styles.card}>
-			<Link href={`/movies/${mediaId}`}>
+			<Link href={`/movies/${media.id}`}>
 				<div className={styles.image}>
 					<Image
-						src='https://images.unsplash.com/photo-1562350683-774f43c5bdca?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-						alt='Affiche du film'
+						src={`${process.env.TMDB_IMAGE_BASE_PATH}${media.poster_path}`}
+						alt={`Affiche du film{media.original_title}`}
 						fill
 					/>
 				</div>
 				<div className={styles.content}>
-					<h2>Dune</h2>
-					<p>Le 01/03/2023</p>
+					<p className={styles.vote}>{media.vote_average.toFixed(1)}</p>
+					<h3>{media.original_title}</h3>
+					<p>
+						Le {new Date(media.release_date).toLocaleDateString('fr-Fr')}
+					</p>
 				</div>
 			</Link>
 		</div>
