@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	font-family: var(--font-montserrat);
+	font-size: 14px;
+	margin: 20px 0 50px 0;
+
+	.genre {
+		padding: 10px 0;
+		background-color: $primary;
+		color: white;
+		font-weight: bold;
+		flex: 0 0 calc(20% - 20px);
+		text-align: center;
+
+		p {
+			margin: 0;
+		}
+	}
+}
