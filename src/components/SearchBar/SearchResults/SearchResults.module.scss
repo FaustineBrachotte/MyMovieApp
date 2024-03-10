@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+
+.searchResults {
+	color: black;
+	position: absolute;
+	z-index: 3;
+	background-color: white;
+	top: 39px;
+	> div a {
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		p {
+			padding-left: 10px;
+			font-family: var(--font-montserrat);
+			font-weight: 500;
+			font-size: 13px;
+		}
+		&:hover {
+			background-color: $primary;
+			color: white;
+		}
+		img {
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+			border-radius: 5px;
+		}
+	}
+}

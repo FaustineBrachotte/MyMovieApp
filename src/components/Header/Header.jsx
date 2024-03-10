@@ -2,6 +2,7 @@ import styles from './Header.module.scss';
 import Link from 'next/link';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SearchBar from '../SearchBar/SearchBar';
 
 function Header() {
 	return (
@@ -23,7 +24,7 @@ function Header() {
 					</ul>
 				</nav>
 			</div>
-			<input type='text' placeholder='Rechercher un titre' />
+			<SearchBar />
 			<div>
 				<FontAwesomeIcon icon={faUser} />
 			</div>
